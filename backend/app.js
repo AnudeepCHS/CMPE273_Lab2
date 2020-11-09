@@ -4,8 +4,7 @@ const session = require("express-session");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const {mongoDB}  = require('./config/dbConfig');
-const mongoose = require('mongoose');
+
 const {secret} = require('./config/sessionConfig');
 
 app.use(bodyParser.json());
@@ -28,21 +27,7 @@ app.use(function (req, res, next) {
 });
 
 
-var options = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    poolSize: 500,
-    bufferMaxEntries: 0
-};
 
-mongoose.connect(mongoDB, options, (err, res) => {
-    if (err) {
-        console.log(err);
-        console.log(`MongoDB Connection Failed`);
-    } else {
-        console.log(`MongoDB Connected`);
-    }
-});
 
 //use express session to maintain session data
 app.use(
