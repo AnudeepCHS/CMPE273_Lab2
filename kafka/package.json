@@ -1,27 +1,36 @@
 {
-  "name": "kafka_backend",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "author": "",
+  "author": "AnudeepCHS",
   "license": "ISC",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "bcryptjs": "^2.4.3",
-    "formidable": "^1.1.1",
-    "glob": "^7.1.2",
-    "images-upload-middleware": "^1.1.1",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
+    "client-sessions": "^0.8.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "express-sessions": "^1.0.6",
     "kafka-node": "^2.5.0",
-    "mongodb": "^2.2.31",
-    "mongodb-autoincrement": "^1.0.1",
-    "mongoose": "^4.12.4",
-    "multer": "^1.3.0",
-    "nodemailer": "^4.6.4",
+    "mocha": "^5.2.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.4",
+    "password-hash": "^1.2.2",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.4",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "uuidv4": "^1.0.0"
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
   }
 }
