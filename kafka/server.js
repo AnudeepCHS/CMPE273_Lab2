@@ -14,8 +14,7 @@ var Orders = require('./services/orders');
 var FollowConnection = require('./services/followConnection');
 var Messages = require('./services/messages');
 
-const { config } = require('./config/configuration');
-var mongoDB = config.mongoDB
+const { mongoDB } = require('./config/configuration');
 const mongoose = require('mongoose');
 // const fs = require('fs');
 
@@ -30,7 +29,7 @@ var options = {
 
 mongoose.connect(mongoDB, options, (err, res) => {
     if (err) {
-        console.log(`MongoDB Connection Failed`);
+        console.log(`MongoDB Connection Failed`+mongoDB);
     } else {
         console.log(`MongoDB Connected`);
     }
