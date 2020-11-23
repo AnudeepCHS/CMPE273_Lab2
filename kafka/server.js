@@ -14,7 +14,8 @@ var Orders = require('./services/orders');
 var FollowConnection = require('./services/followConnection');
 var Messages = require('./services/messages');
 
-const { mongoDB } = require('./config/configuration');
+const { config } = require('./config/configuration');
+var mongoDB = config.mongoDB
 const mongoose = require('mongoose');
 // const fs = require('fs');
 
